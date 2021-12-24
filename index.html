@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caixa das Engrenagens</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/jquery-ui.css">
+        <style>
+            #draggable{
+                position: absolute;
+                top: 0;
+            }
+            .ui-widget-content{width: fit-content; border:none; background-color: transparent;}
+            body{
+                background-image: url(./assets/backgroundImg.png);
+                background-color: #cccccc; 
+                height: 100vh;
+                background-position: top center; 
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .fechadura{
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 20px;
+                border: 1px solid #ffffff;
+                padding: 20px;
+            }
+            select{
+                width: 100%;
+                background-color: black;
+                border-style: none;
+                border: 1px solid white;
+                padding: 10px;
+                color: white;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .msg{
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                margin: 10px;
+                line-height: 0;
+            }
+        </style>
+        <script src="./assets/jquery-3.6.0.js"></script>
+        <script src="./assets/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div class="container trancado" style="height: 100vh; display: flex; align-items: center;">
+            <div class="row fechadura justify-content-center" style="width: 100%;">
+                <div class="col-1">
+                    <select id="1st">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select id="2st">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select id="3st">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select id="4st">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select id="5st">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select id="6st">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container destravado" style="height: 100vh; display: none; align-items: center;">
+            <div class="row fechadura justify-content-center" style="width: 100%;">
+                <div class="col-6">
+                    <p class="msg">A caixa faz thic!</p>
+                </div>
+            </div>
+        </div>  
+
+        <div id="draggable" class="ui-widget-content">
+            <img src="./assets/papel.png">
+          </div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="./assets/script.js"></script>
+    </body>
+</html>
